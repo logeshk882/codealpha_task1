@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Language Translation Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Language Translation Tool</h1>
+    <img src="https://img.icons8.com/color/96/translation.png" alt="Translation Icon" class="header-icon" />
+    
+
+    <form id="translationForm" autocomplete="off">
+      <label for="sourceLang">Source language (optional - auto-detect if left blank)</label>
+      <select id="sourceLang">
+        <option value="">Auto Detect</option>
+        <option value="en">English (en)</option>
+        <option value="hi">Hindi (hi)</option>
+        <option value="es">Spanish (es)</option>
+        <option value="fr">French (fr)</option>
+        <option value="de">German (de)</option>
+        <option value="zh">Chinese (zh)</option>
+        <!-- add more languages as needed -->
+      </select>
+
+      <label for="targetLang">Target language</label>
+      <select id="targetLang">
+        <option value="en">English (en)</option>
+        <option value="hi" selected>Hindi (hi)</option>
+        <option value="es">Spanish (es)</option>
+        <option value="fr">French (fr)</option>
+        <option value="de">German (de)</option>
+        <option value="zh">Chinese (zh)</option>
+        <!-- add more languages as needed -->
+      </select>
+
+      <label for="inputText">Text to translate</label>
+      <textarea id="inputText" rows="6" placeholder="Type or paste text here..."></textarea>
+
+      <div class="controls">
+        <button type="button" id="translateBtn">Translate</button>
+        <button type="button" id="clearBtn">Clear</button>
+      </div>
+
+      <label for="outputText">Translated text</label>
+      <textarea id="outputText" rows="6" readonly placeholder="Translation appears here..."></textarea>
+
+      <div class="actions">
+        <button type="button" id="copyBtn">Copy</button>
+        <button type="button" id="speakBtn">Speak</button>
+      </div>
+    </form>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src
